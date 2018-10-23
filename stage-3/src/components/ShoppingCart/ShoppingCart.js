@@ -31,10 +31,10 @@ class ShoppingCart extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state);
+    console.log('--- state', state);
     return {
         shoppingCart: state.shoppingCart
     };
 }
 
-export default connect(mapStateToProps)(ShoppingCart);
+export default connect(mapStateToProps, {removeFromShoppingCart})(ShoppingCart);
